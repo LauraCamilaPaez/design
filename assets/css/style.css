@@ -1,0 +1,174 @@
+/* ======
+    Styles
+====== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+/* ======
+    CSS Variables
+====== */
+
+/* Aquí podemos declarar variables que se pueden usar más adelante, esta es una PSEUDO-CLASE :root, sirve para aplicarlas globalmente al documento HTML */
+:root{
+    /* Para declarar las variables se usa un nombre que comience con dos guíones y un valor valido de css, ejemplo:
+        :root{
+            --nombre-de-la-variable: valor
+        }
+
+        nota: Son case sensitives --nombre-de-la-variable no es igual a --Nombre-de-la-variable
+    */
+
+    --colorWhite: #ffffff;
+    --colorBlack: #000000;
+    --colorMain: #f36;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    /* Para usar una variable se usa el nombre de la propiedad en este caso background y para darle un valor a la propiedad usamos la palabra reservada var abrimos parentesis y escribimos --nombre-de-la-variable, así */
+    /*background: var(--blueColor) ;*/
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+/* Start nav */
+nav#nav{
+    width: 100%;
+    height: 8rem;
+    line-height: 8rem;
+    background: var(--colorWhite);
+    display: flex;
+    box-shadow: 0 0 5rem .5rem rgba(0, 0, 0, .05);
+}
+/* Resposive */
+@media(max-width: 768px){
+    nav#nav{
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+.left-ul li{
+    list-style: none;
+}
+
+.logo{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.right-ul{
+    display: flex;
+}
+
+.right-ul li{
+    list-style: none;
+}
+
+.right-ul li a{
+    text-decoration: none;
+    margin-right: 2rem;
+}
+
+.empty{
+    margin: 0 auto;
+}
+
+/* btns */
+.btn{
+    display: inline-block;
+    color: var(--colorWhite);
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 0;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 3rem;
+    outline: none;
+    padding: 2rem 3.2rem;
+    letter-spacing: 1px;
+}
+
+.btn-sweet{
+    background: var(--colorMain);
+}
+
+.btn-outline{
+    border-color: var(--colorMain);
+    color: var(--colorMain);
+}
+/* End nav */
+
+/* Start Form Sign Up */
+
+#form{
+    margin: 7rem 5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-section{
+    width: 50rem;
+}
+
+@media(max-width:768px){
+    .form-section{
+        width: 100%;
+    }
+}
+
+.form--header{
+    margin-bottom: 4rem;
+}
+
+.form--header h2{
+    font-size: 3.5rem;
+}
+
+.form--header p{
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .form--header h2{
+        font-size: 2.5rem;
+    }
+}
+.group{
+    margin-bottom: 1.5rem;
+}
+
+.form--label {
+    display: block;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #434C5E;
+    margin-bottom: .8rem;
+    letter-spacing: 1px;
+}
+
+.control{
+    width: 100%;
+    display: block;
+    padding: 1.5rem;
+    border-radius: 3px;
+    border: 1px solid #D4D9E2;
+    font-size: 1.4rem;
+    color: #596377;
+    outline: none;
+}
+
+/* End Form Sign Up */
+
+
+
+

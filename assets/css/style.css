@@ -154,7 +154,28 @@ nav#nav{
     color: #434C5E;
     margin-bottom: .8rem;
     letter-spacing: 1px;
+    position: relative;
+    text-transform: uppercase;
 }
+/* Begin :: Login form */
+.forgotPassword{
+    position: absolute;
+    /* top: 0; 
+    en este caso como el elemento dentro de la clase tiene la posición absoluta (position: absolute;), el valor de top determina la distancia entre el borde superior del elemento y el borde superior del bloque que lo contiene
+    */
+    top: 0;
+    right: 0;
+}
+
+.forgotPassword a{
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    color: #434c5e;
+}
+
+/* End :: Login form */
 
 .control{
     width: 100%;
@@ -169,6 +190,49 @@ nav#nav{
 
 /* End Form Sign Up */
 
+/* Begin :: Dashboard */
+
+.container{
+    margin: 0 4rem;
+}
+
+.dashboard{
+    margin: 7rem 0;
+    display: flex;
+    width: 100%;
+}
+
+.card{
+    width: 22%;
+    background: var(--colorWhite);
+    box-shadow: 0 1rem 4rem  .5rem rgba(0, 0, 0, 0 .05);
+    padding: 4rem;
+    text-align: center;
+    border-radius: .4rem;
+}
+
+.card--image{
+    width: 10rem;
+    height: 10rem;
+    margin: auto 0;
+}
+
+.card--image img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border-top: 4px solid var(--colorMain);
+    border-right: 4px solid var(--colorMain);
+    border-bottom: 4px solid var(--colorMain);
+    border-left: 4px solid transparent;
+}
+
+.content {
+    width: 78%;
+    background: green;
+}
+
+/* End :: Dashboard */
 
 
 

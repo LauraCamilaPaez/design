@@ -25,6 +25,7 @@
     --colorWhite: #ffffff;
     --colorBlack: #000000;
     --colorMain: #f36;
+    --colorBlackLight: #2e2e2e;
 }
 
 html{
@@ -192,6 +193,7 @@ nav#nav{
 
 /* Begin :: Dashboard */
 
+/* Begin :: Profile */
 .container{
     margin: 0 4rem;
 }
@@ -205,7 +207,7 @@ nav#nav{
 .card{
     width: 22%;
     background: var(--colorWhite);
-    box-shadow: 0 1rem 4rem  .5rem rgba(0, 0, 0, 0 .05);
+    box-shadow: 0 1rem 4rem .5rem rgba(0, 0, 0, .05);
     padding: 4rem;
     text-align: center;
     border-radius: .4rem;
@@ -214,7 +216,7 @@ nav#nav{
 .card--image{
     width: 10rem;
     height: 10rem;
-    margin: auto 0;
+    margin: 0 auto;
 }
 
 .card--image img{
@@ -224,13 +226,132 @@ nav#nav{
     border-top: 4px solid var(--colorMain);
     border-right: 4px solid var(--colorMain);
     border-bottom: 4px solid var(--colorMain);
-    border-left: 4px solid transparent;
+    border-left: 4px solid silver;
+    padding: .4rem;
 }
 
+.card--name{
+    margin: 2rem 0;
+    font-size: 1.6rem;
+    color: var(--colorBlackLight);
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.card--job{
+    color: #777;
+    font-size: 1.4rem;
+}
+
+.card--skills{
+    margin: 1rem 0;
+}
+
+.skill{
+    display: inline-block;
+    padding: 1rem;
+    border: 1px solid silver;
+    border-radius: 3rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-left: .6rem;
+    margin-top: .8rem;
+}
+
+/* La pseudo-clase :first-child de CSS representa el primer elemento entre un grupo de elementos hermanos. */
+.skill:first-child {
+    background: var(--colorBlack);
+    border: none;
+    color: var(--colorWhite);
+    box-shadow: rgba(0, 0, 0, .05);
+}
+
+/* La pseudo-clase :last-child de CSS representa el último elemento entre un grupo de elementos hermanos. */
+.skill:last-child{
+    background: var(--colorMain);
+    border: none;
+    color: var(--colorWhite);
+    box-shadow: 0 1rem 4rem .5rem rgba(0, 0, 0, .05);
+}
+
+.card--intro{
+    font-size: 1.3rem;
+    color: silver;
+    margin: 1.5rem 0 1.5rem 0;
+}
+/* End :: Profile */
+
+/* Begin :: content */
 .content {
     width: 78%;
-    background: green;
 }
+
+.content-section{
+    background-color: var(--colorWhite);
+    margin-left: 3rem;
+    padding: 3rem 5rem 3rem 3rem;
+    border-radius: .4rem;
+    box-shadow: 0 1rem 4rem .5rem rgba(0, 0, 0, .05);
+    font-size: 1.3rem;
+}
+
+.dashboard-heading{
+    font-size: 1.8rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    border-bottom: .1rem solid var(--colorMain);
+    padding-bottom: 1rem;
+}
+
+.btn-white{
+    display: inline-block;
+    padding: 1rem 1.3rem;
+    background-color: var(--colorWhite);
+    border-radius: 0;
+    color: var(--colorBlackLight);
+    text-decoration: none;
+    box-shadow: 0 1rem 4rem .5rem rgba(0, 0, 0, .05);
+}
+
+.btn-white.icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    display: inline-block;
+    background: var(--colorMain);
+    border-radius: 50%;
+    text-align: center;
+    color: var(--colorWhite);
+    margin-left: .5rem;    
+}
+
+.btn-card{
+    display: inline-block;
+    padding: 1rem 1.3rem;
+    background-color: var(--colorMain);
+    border-radius: .5rem;
+    color: var(--colorWhite);
+    text-decoration: none;
+    box-shadow: 0 1rem 4rem .5rem rgba(0, 0, 0, .05);
+}
+
+.btn-card .icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    display: inline-block;
+    background: var(--colorWhite);
+    border-radius: 50%;
+    text-align: center;
+    color: var(--colorMain);
+    margin-left: .5rem;    
+}
+
+.btn-section{
+    margin-left: 1rem;
+}
+
+/* End :: content */
 
 /* End :: Dashboard */
 
